@@ -32,5 +32,3 @@ def invoke_prompt(client, prompt_arn, variables):
     except Exception as e:
         logger.error("Error invoking prompt: %s", str(e))
         raise
-
-
