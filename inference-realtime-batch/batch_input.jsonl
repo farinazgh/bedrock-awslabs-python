@@ -1,0 +1,10 @@
+{"recordId": "001", "modelInput": {"messages": [{"role": "user", "content": [{"text": "Summarise cloud computing in 2 bullet points."}]}], "inferenceConfig": {"maxTokens": 200}}}
+{"recordId": "002", "modelInput": {"messages": [{"role": "user", "content": [{"text": "What are the benefits of serverless computing?"}]}], "inferenceConfig": {"maxTokens": 200}}}
+{"recordId": "003", "modelInput": {"messages": [{"role": "user", "content": [{"text": "Explain what a foundation model is in simple terms."}]}], "inferenceConfig": {"maxTokens": 200}}}
+{"recordId": "004", "modelInput": {"messages": [{"role": "user", "content": [{"text": "What is the difference between AI and machine learning?"}]}], "inferenceConfig": {"maxTokens": 200}}}
+{"recordId": "005", "modelInput": {"messages": [{"role": "user", "content": [{"text": "List 3 use cases for generative AI in healthcare."}]}], "inferenceConfig": {"maxTokens": 200}}}
+{"recordId": "006", "modelInput": {"messages": [{"role": "user", "content": [{"text": "Summarise cloud computing in 2 bullet points."}]}], "inferenceConfig": {"maxTokens": 200}}}
+{"recordId": "007", "modelInput": {"messages": [{"role": "user", "content": [{"text": "What are the benefits of serverless computing?"}]}], "inferenceConfig": {"maxTokens": 200}}}
+{"recordId": "008", "modelInput": {"messages": [{"role": "user", "content": [{"text": "Explain what a foundation model is in simple terms."}]}], "inferenceConfig": {"maxTokens": 200}}}
+{"recordId": "009", "modelInput": {"messages": [{"role": "user", "content": [{"text": "What is the difference between AI and machine learning?"}]}], "inferenceConfig": {"maxTokens": 200}}}
+{"recordId": "010", "modelInput": {"messages": [{"role": "user", "content": [{"text": "List 3 use cases for generative AI in healthcare."}]}], "inferenceConfig": {"maxTokens": 200}}}
