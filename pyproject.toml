@@ -17,6 +17,7 @@ dependencies = [
     "iniconfig>=2.3.0",
     "isort>=8.0.1",
     "jmespath>=1.1.0",
+    "numpy>=2.5.2",
     "packaging>=26.2",
     "pluggy>=1.6.0",
     "pytest>=9.1.1",
