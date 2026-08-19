@@ -1,0 +1,161 @@
+======================================================================
+SEMANTIC SEARCH
+Query: BP-STAFF-003
+Results: 12
+======================================================================
+
+Result 1
+Score: 0.37032586
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ to local charities every week.
+----------------------------------------------------------------------
+Result 2
+Score: 0.36964864
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ hospitality industries.
+----------------------------------------------------------------------
+Result 3
+Score: 0.36808047
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ company.
+----------------------------------------------------------------------
+Result 4
+Score: 0.3665281
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ training new Head Chefs joining the Bob's Pizza network.
+----------------------------------------------------------------------
+Result 5
+Score: 0.35813016
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ in seasonal and locally sourced ingredients from regional farms.
+----------------------------------------------------------------------
+Result 6
+Score: 0.35791782
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ with Natasha's Law in 2021.
+----------------------------------------------------------------------
+Result 7
+Score: 0.35694948
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ to lead his own kitchen team and contribute to a growing brand.
+----------------------------------------------------------------------
+Result 8
+Score: 0.3545222
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ University of Exeter and a professional certificate from the CIM.
+----------------------------------------------------------------------
+Result 9
+Score: 0.3533092
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ ================================================================
+----------------------------------------------------------------------
+Result 10
+Score: 0.35287932
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ moving to England in 2016.
+----------------------------------------------------------------------
+Result 11
+Score: 0.35097834
+Exact query found: YES
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ locations quickly and effectively.
+----------------------------------------------------------------------
+Result 12
+Score: 0.34702542
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ Values Award in 2023 for his commitment to inclusive dining.
+----------------------------------------------------------------------
+
+BP-STAFF-003 found at result position(s): 11
+
+======================================================================
+HYBRID SEARCH
+Query: BP-STAFF-003
+Results: 12
+======================================================================
+
+Result 1
+Score: 0.37032586
+Exact query found: YES
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ locations quickly and effectively.
+----------------------------------------------------------------------
+Result 2
+Score: 0.37032586
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ to local charities every week.
+----------------------------------------------------------------------
+Result 3
+Score: 0.36964864
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ hospitality industries.
+----------------------------------------------------------------------
+Result 4
+Score: 0.36808047
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ company.
+----------------------------------------------------------------------
+Result 5
+Score: 0.3665281
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ training new Head Chefs joining the Bob's Pizza network.
+----------------------------------------------------------------------
+Result 6
+Score: 0.35813016
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ in seasonal and locally sourced ingredients from regional farms.
+----------------------------------------------------------------------
+Result 7
+Score: 0.35791782
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ with Natasha's Law in 2021.
+----------------------------------------------------------------------
+Result 8
+Score: 0.35694948
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ to lead his own kitchen team and contribute to a growing brand.
+----------------------------------------------------------------------
+Result 9
+Score: 0.3545222
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ University of Exeter and a professional certificate from the CIM.
+----------------------------------------------------------------------
+Result 10
+Score: 0.3533092
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ ================================================================
+----------------------------------------------------------------------
+Result 11
+Score: 0.35287932
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ moving to England in 2016.
+----------------------------------------------------------------------
+Result 12
+Score: 0.34702542
+Exact query found: NO
+Source: s3://bob-pizza-staff-directory/bobs-pizza-staff-directory.txt
+ Values Award in 2023 for his commitment to inclusive dining.
+----------------------------------------------------------------------
+
+BP-STAFF-003 found at result position(s): 1
