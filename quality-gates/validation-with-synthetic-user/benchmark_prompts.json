@@ -1,0 +1,27 @@
+[
+  {
+    "prompt": "What is the capital of France?",
+    "expectedOutput": "Paris",
+    "category": "factual"
+  },
+  {
+    "prompt": "Summarize the concept of photosynthesis in one sentence.",
+    "expectedOutput": "Photosynthesis is the process by which plants convert sunlight, water, and carbon dioxide into glucose and oxygen.",
+    "category": "summarization"
+  },
+  {
+    "prompt": "What programming language is primarily used for iOS app development?",
+    "expectedOutput": "Swift",
+    "category": "factual"
+  },
+  {
+    "prompt": "Explain the difference between TCP and UDP in one sentence.",
+    "expectedOutput": "TCP is a connection-oriented protocol that guarantees reliable, ordered delivery of data, while UDP is connectionless and prioritizes speed over reliability.",
+    "category": "technical"
+  },
+  {
+    "prompt": "What year did the first human land on the Moon?",
+    "expectedOutput": "1969",
+    "category": "factual"
+  }
+]

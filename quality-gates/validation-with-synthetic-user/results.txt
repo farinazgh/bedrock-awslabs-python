@@ -1,0 +1,90 @@
+Loaded 5 benchmark prompts.
+
+Running benchmark 1/5...
+
+Running benchmark 2/5...
+
+Running benchmark 3/5...
+
+Running benchmark 4/5...
+
+Running benchmark 5/5...
+
+======================================================================
+BEDROCK MODEL QUALITY VALIDATION
+======================================================================
+Region:               us-east-1
+Generator model:      amazon.nova-lite-v1:0
+Embedding model:      amazon.titan-embed-text-v2:0
+Similarity threshold: 0.75
+
+----------------------------------------------------------------------
+TEST 1
+----------------------------------------------------------------------
+Category:      factual
+Prompt:        What is the capital of France?
+Expected:      Paris
+Response:      The capital of France is Paris. Paris is not only the capital but also the largest city in France, known for its rich history, culture, and iconic landmarks such as the Eiffel Tower, the Louvre Museum, and Notre-Dame Cathedral. It is a major European hub for art, fashion, gastronomy, and politics.
+Hallucinated:  False
+Similarity:    0.4580
+Semantic drift: True
+
+----------------------------------------------------------------------
+TEST 2
+----------------------------------------------------------------------
+Category:      summarization
+Prompt:        Summarize the concept of photosynthesis in one sentence.
+Expected:      Photosynthesis is the process by which plants convert sunlight, water, and carbon dioxide into glucose and oxygen.
+Response:      Photosynthesis is the process by which plants, algae, and some bacteria convert sunlight, water, and carbon dioxide into glucose, oxygen, and other chemical compounds, providing energy for life on Earth.
+Hallucinated:  True
+Similarity:    0.8677
+Semantic drift: False
+
+----------------------------------------------------------------------
+TEST 3
+----------------------------------------------------------------------
+Category:      factual
+Prompt:        What programming language is primarily used for iOS app development?
+Expected:      Swift
+Response:      The primary programming languages used for iOS app development are:
+
+1. **Swift**: Developed by Apple in 2014, Swift is the modern, preferred language for iOS development. It is designed to be easy to use and is known for its performance and safety features.
+
+2. **Objective-C**: This is the older language used for iOS development, predating Swift. While it is still supported and many existing iOS apps are written in Objective-C, new development typically favors Swift.
+
+Both languages can be used to develop apps for iOS, but Swift is the recommended choice for new projects due to its modern syntax and features.
+Hallucinated:  False
+Similarity:    0.2672
+Semantic drift: True
+
+----------------------------------------------------------------------
+TEST 4
+----------------------------------------------------------------------
+Category:      technical
+Prompt:        Explain the difference between TCP and UDP in one sentence.
+Expected:      TCP is a connection-oriented protocol that guarantees reliable, ordered delivery of data, while UDP is connectionless and prioritizes speed over reliability.
+Response:      TCP is a connection-oriented protocol that ensures reliable data delivery, while UDP is a connectionless protocol that provides faster, but less reliable, data transmission.
+Hallucinated:  True
+Similarity:    0.9853
+Semantic drift: False
+
+----------------------------------------------------------------------
+TEST 5
+----------------------------------------------------------------------
+Category:      factual
+Prompt:        What year did the first human land on the Moon?
+Expected:      1969
+Response:      The first human landed on the Moon during the Apollo 11 mission. The mission was commanded by Neil Armstrong, who, along with fellow astronaut Edwin "Buzz" Aldrin, became the first people to set foot on the lunar surface. This historic event took place on July 20, 1969. The third member of the Apollo 11 crew, Michael Collins, orbited the Moon in the command module while Armstrong and Aldrin descended to the surface in the lunar module, named "Eagle." Armstrong's famous words as he stepped onto the Moon were, "That's one small step for [a] man, one giant leap for mankind."
+Hallucinated:  False
+Similarity:    0.2143
+Semantic drift: True
+
+======================================================================
+SUMMARY
+======================================================================
+Prompts tested:       5
+Hallucination rate:   40.00%
+Average similarity:   0.5585
+Semantic drift count: 3
+
+Metrics published to CloudWatch namespace: BedrockModelValidation
