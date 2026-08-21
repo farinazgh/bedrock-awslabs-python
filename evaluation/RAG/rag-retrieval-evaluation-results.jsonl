@@ -1,0 +1,606 @@
+{
+  "conversationTurns": [
+    {
+      "inputRecord": {
+        "prompt": {
+          "content": [
+            {
+              "text": "What is the maximum execution timeout for an AWS Lambda function?"
+            }
+          ]
+        },
+        "referenceResponses": [
+          {
+            "content": [
+              {
+                "text": "The maximum execution timeout for a Lambda function is 15 minutes."
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "knowledgeBaseIdentifier": "TBL5DCTTHM",
+        "retrievedResults": {
+          "retrievalResults": [
+            {
+              "content": {
+                "text": "AWS Lambda Overview\r \r AWS Lambda is a serverless compute service that runs your code in response to events and automatically manages the underlying compute resources. Lambda functions can be triggered by various AWS services including API Gateway, S3, DynamoDB Streams, SNS, SQS, and EventBridge. Lambda supports multiple programming languages including Python, Node.js, Java, Go, .NET, and Ruby. Each Lambda function runs in its own isolated execution environment. Lambda automatically scales by running code in response to each trigger, processing each trigger individually. You pay only for the compute time you consume, with no charge when your code is not running. The maximum execution timeout for a Lambda function is 15 minutes. Lambda functions can have up to 10 GB of memory allocated. Lambda supports container images up to 10 GB in size as deployment packages."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/lambda-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "1d864241-580d-46ee-9067-a8797b616930",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            },
+            {
+              "content": {
+                "text": "Amazon S3 Overview\r \r Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. S3 stores data as objects within buckets. An object consists of a file and optionally any metadata that describes that file. S3 offers multiple storage classes designed for different use cases: S3 Standard for frequently accessed data, S3 Intelligent-Tiering for data with unknown or changing access patterns, S3 Standard-IA and S3 One Zone-IA for infrequently accessed data, S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, and S3 Glacier Deep Archive for long-term archive. S3 provides 99.999999999% (11 nines) of data durability. S3 supports versioning to preserve, retrieve, and restore every version of every object stored in a bucket. S3 bucket names must be globally unique across all AWS accounts."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/s3-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "828c211e-ab2b-412f-9a59-065624c62e85",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            },
+            {
+              "content": {
+                "text": "Amazon DynamoDB Overview\r \r Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. DynamoDB supports both key-value and document data models. Tables in DynamoDB are schemaless, meaning each item can have a different set of attributes. DynamoDB uses primary keys to uniquely identify each item in a table. A primary key can be a simple partition key or a composite key consisting of a partition key and a sort key. DynamoDB supports two read consistency models: eventually consistent reads and strongly consistent reads. DynamoDB offers two capacity modes: on-demand and provisioned. DynamoDB Streams captures a time-ordered sequence of item-level modifications in a DynamoDB table. Global tables provide a fully managed solution for deploying a multi-Region, multi-active database. DynamoDB supports transactions with ACID properties across multiple items and tables."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/dynamodb-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "673efc6d-ebc8-41e4-899f-10a603c07f23",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "metricName": "Builtin.ContextRelevance",
+          "evaluatorDetails": [
+            {
+              "modelIdentifier": "arn:aws:bedrock:us-east-1:339712939282:inference-profile/us.anthropic.claude-sonnet-4-6",
+              "explanation": "{\"passage_0\": \"The question asks about the maximum execution timeout for an AWS Lambda function. The passage explicitly states 'The maximum execution timeout for a Lambda function is 15 minutes.' This directly and completely answers the question.\", \"passage_1\": \"The question asks about the maximum execution timeout for an AWS Lambda function. The passage provided is entirely about Amazon S3 (Simple Storage Service), covering topics like storage classes, data durability, versioning, and bucket naming. There is no mention of AWS Lambda or execution timeouts anywhere in the passage. The passage is clearly irrelevant to the question.\", \"passage_2\": \"The question asks about the maximum execution timeout for an AWS Lambda function. The passage is entirely about Amazon DynamoDB, a NoSQL database service. It contains no information about AWS Lambda or its execution timeout limits. These are completely different AWS services.\"}"
+            }
+          ],
+          "result": 0.333
+        },
+        {
+          "metricName": "Builtin.ContextCoverage",
+          "evaluatorDetails": [
+            {
+              "modelIdentifier": "arn:aws:bedrock:us-east-1:339712939282:inference-profile/us.anthropic.claude-sonnet-4-6",
+              "explanation": "The ground-truth answer states that 'The maximum execution timeout for a Lambda function is 15 minutes.' Looking at the passages, the AWS Lambda Overview passage explicitly states: 'The maximum execution timeout for a Lambda function is 15 minutes.' This is an exact match, meaning all information in the ground-truth answer is fully supported by the passages."
+            }
+          ],
+          "result": 1.0
+        }
+      ]
+    }
+  ]
+}
+{
+  "conversationTurns": [
+    {
+      "inputRecord": {
+        "prompt": {
+          "content": [
+            {
+              "text": "What programming languages does AWS Lambda support?"
+            }
+          ]
+        },
+        "referenceResponses": [
+          {
+            "content": [
+              {
+                "text": "Lambda supports Python, Node.js, Java, Go, .NET, and Ruby."
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "knowledgeBaseIdentifier": "TBL5DCTTHM",
+        "retrievedResults": {
+          "retrievalResults": [
+            {
+              "content": {
+                "text": "AWS Lambda Overview\r \r AWS Lambda is a serverless compute service that runs your code in response to events and automatically manages the underlying compute resources. Lambda functions can be triggered by various AWS services including API Gateway, S3, DynamoDB Streams, SNS, SQS, and EventBridge. Lambda supports multiple programming languages including Python, Node.js, Java, Go, .NET, and Ruby. Each Lambda function runs in its own isolated execution environment. Lambda automatically scales by running code in response to each trigger, processing each trigger individually. You pay only for the compute time you consume, with no charge when your code is not running. The maximum execution timeout for a Lambda function is 15 minutes. Lambda functions can have up to 10 GB of memory allocated. Lambda supports container images up to 10 GB in size as deployment packages."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/lambda-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "1d864241-580d-46ee-9067-a8797b616930",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            },
+            {
+              "content": {
+                "text": "Amazon DynamoDB Overview\r \r Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. DynamoDB supports both key-value and document data models. Tables in DynamoDB are schemaless, meaning each item can have a different set of attributes. DynamoDB uses primary keys to uniquely identify each item in a table. A primary key can be a simple partition key or a composite key consisting of a partition key and a sort key. DynamoDB supports two read consistency models: eventually consistent reads and strongly consistent reads. DynamoDB offers two capacity modes: on-demand and provisioned. DynamoDB Streams captures a time-ordered sequence of item-level modifications in a DynamoDB table. Global tables provide a fully managed solution for deploying a multi-Region, multi-active database. DynamoDB supports transactions with ACID properties across multiple items and tables."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/dynamodb-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "673efc6d-ebc8-41e4-899f-10a603c07f23",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            },
+            {
+              "content": {
+                "text": "Amazon S3 Overview\r \r Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. S3 stores data as objects within buckets. An object consists of a file and optionally any metadata that describes that file. S3 offers multiple storage classes designed for different use cases: S3 Standard for frequently accessed data, S3 Intelligent-Tiering for data with unknown or changing access patterns, S3 Standard-IA and S3 One Zone-IA for infrequently accessed data, S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, and S3 Glacier Deep Archive for long-term archive. S3 provides 99.999999999% (11 nines) of data durability. S3 supports versioning to preserve, retrieve, and restore every version of every object stored in a bucket. S3 bucket names must be globally unique across all AWS accounts."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/s3-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "828c211e-ab2b-412f-9a59-065624c62e85",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "metricName": "Builtin.ContextRelevance",
+          "evaluatorDetails": [
+            {
+              "modelIdentifier": "arn:aws:bedrock:us-east-1:339712939282:inference-profile/us.anthropic.claude-sonnet-4-6",
+              "explanation": "{\"passage_0\": \"The question asks about programming languages supported by AWS Lambda. The passage explicitly states 'Lambda supports multiple programming languages including Python, Node.js, Java, Go, .NET, and Ruby.' This directly answers the question with specific language names.\", \"passage_1\": \"The question asks about programming languages supported by AWS Lambda. The passage is entirely about Amazon DynamoDB, a NoSQL database service. It contains no information about AWS Lambda or its supported programming languages. These are completely different AWS services.\", \"passage_2\": \"The question asks about programming languages supported by AWS Lambda. The passage is about Amazon S3 (Simple Storage Service), which is an object storage service. The passage contains no information about AWS Lambda or its supported programming languages. These are completely different AWS services.\"}"
+            }
+          ],
+          "result": 0.333
+        },
+        {
+          "metricName": "Builtin.ContextCoverage",
+          "evaluatorDetails": [
+            {
+              "modelIdentifier": "arn:aws:bedrock:us-east-1:339712939282:inference-profile/us.anthropic.claude-sonnet-4-6",
+              "explanation": "The ground-truth answer states that Lambda supports Python, Node.js, Java, Go, .NET, and Ruby. The first passage (AWS Lambda Overview) explicitly states: 'Lambda supports multiple programming languages including Python, Node.js, Java, Go, .NET, and Ruby.' This is an exact match with all the information in the ground-truth answer. All languages mentioned in the ground-truth answer are covered by the passages."
+            }
+          ],
+          "result": 1.0
+        }
+      ]
+    }
+  ]
+}
+{
+  "conversationTurns": [
+    {
+      "inputRecord": {
+        "prompt": {
+          "content": [
+            {
+              "text": "How many nines of durability does Amazon S3 provide?"
+            }
+          ]
+        },
+        "referenceResponses": [
+          {
+            "content": [
+              {
+                "text": "Amazon S3 provides 99.999999999% (11 nines) of data durability."
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "knowledgeBaseIdentifier": "TBL5DCTTHM",
+        "retrievedResults": {
+          "retrievalResults": [
+            {
+              "content": {
+                "text": "Amazon S3 Overview\r \r Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. S3 stores data as objects within buckets. An object consists of a file and optionally any metadata that describes that file. S3 offers multiple storage classes designed for different use cases: S3 Standard for frequently accessed data, S3 Intelligent-Tiering for data with unknown or changing access patterns, S3 Standard-IA and S3 One Zone-IA for infrequently accessed data, S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, and S3 Glacier Deep Archive for long-term archive. S3 provides 99.999999999% (11 nines) of data durability. S3 supports versioning to preserve, retrieve, and restore every version of every object stored in a bucket. S3 bucket names must be globally unique across all AWS accounts."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/s3-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "828c211e-ab2b-412f-9a59-065624c62e85",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            },
+            {
+              "content": {
+                "text": "Amazon DynamoDB Overview\r \r Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. DynamoDB supports both key-value and document data models. Tables in DynamoDB are schemaless, meaning each item can have a different set of attributes. DynamoDB uses primary keys to uniquely identify each item in a table. A primary key can be a simple partition key or a composite key consisting of a partition key and a sort key. DynamoDB supports two read consistency models: eventually consistent reads and strongly consistent reads. DynamoDB offers two capacity modes: on-demand and provisioned. DynamoDB Streams captures a time-ordered sequence of item-level modifications in a DynamoDB table. Global tables provide a fully managed solution for deploying a multi-Region, multi-active database. DynamoDB supports transactions with ACID properties across multiple items and tables."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/dynamodb-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "673efc6d-ebc8-41e4-899f-10a603c07f23",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            },
+            {
+              "content": {
+                "text": "AWS Lambda Overview\r \r AWS Lambda is a serverless compute service that runs your code in response to events and automatically manages the underlying compute resources. Lambda functions can be triggered by various AWS services including API Gateway, S3, DynamoDB Streams, SNS, SQS, and EventBridge. Lambda supports multiple programming languages including Python, Node.js, Java, Go, .NET, and Ruby. Each Lambda function runs in its own isolated execution environment. Lambda automatically scales by running code in response to each trigger, processing each trigger individually. You pay only for the compute time you consume, with no charge when your code is not running. The maximum execution timeout for a Lambda function is 15 minutes. Lambda functions can have up to 10 GB of memory allocated. Lambda supports container images up to 10 GB in size as deployment packages."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/lambda-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "1d864241-580d-46ee-9067-a8797b616930",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "metricName": "Builtin.ContextRelevance",
+          "evaluatorDetails": [
+            {
+              "modelIdentifier": "arn:aws:bedrock:us-east-1:339712939282:inference-profile/us.anthropic.claude-sonnet-4-6",
+              "explanation": "{\"passage_0\": \"The question asks about the number of nines of durability Amazon S3 provides. The passage explicitly states 'S3 provides 99.999999999% (11 nines) of data durability.' This directly and completely answers the question.\", \"passage_1\": \"The question asks about Amazon S3's durability (number of nines). The passage is entirely about Amazon DynamoDB - a NoSQL database service. It contains no information about Amazon S3 or its durability guarantees. These are completely different AWS services.\", \"passage_2\": \"The question asks about Amazon S3's durability (number of nines). The passage is entirely about AWS Lambda - a serverless compute service. It contains no information about Amazon S3 or its durability guarantees. Therefore, the passage is clearly irrelevant to the question.\"}"
+            }
+          ],
+          "result": 0.333
+        },
+        {
+          "metricName": "Builtin.ContextCoverage",
+          "evaluatorDetails": [
+            {
+              "modelIdentifier": "arn:aws:bedrock:us-east-1:339712939282:inference-profile/us.anthropic.claude-sonnet-4-6",
+              "explanation": "The ground-truth answer states that Amazon S3 provides 99.999999999% (11 nines) of data durability. Looking at the passages, the Amazon S3 Overview passage explicitly states: 'S3 provides 99.999999999% (11 nines) of data durability.' This is an exact match with the ground-truth answer, covering all the information needed."
+            }
+          ],
+          "result": 1.0
+        }
+      ]
+    }
+  ]
+}
+{
+  "conversationTurns": [
+    {
+      "inputRecord": {
+        "prompt": {
+          "content": [
+            {
+              "text": "What are the two capacity modes available in DynamoDB?"
+            }
+          ]
+        },
+        "referenceResponses": [
+          {
+            "content": [
+              {
+                "text": "DynamoDB offers two capacity modes: on-demand and provisioned."
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "knowledgeBaseIdentifier": "TBL5DCTTHM",
+        "retrievedResults": {
+          "retrievalResults": [
+            {
+              "content": {
+                "text": "Amazon DynamoDB Overview\r \r Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. DynamoDB supports both key-value and document data models. Tables in DynamoDB are schemaless, meaning each item can have a different set of attributes. DynamoDB uses primary keys to uniquely identify each item in a table. A primary key can be a simple partition key or a composite key consisting of a partition key and a sort key. DynamoDB supports two read consistency models: eventually consistent reads and strongly consistent reads. DynamoDB offers two capacity modes: on-demand and provisioned. DynamoDB Streams captures a time-ordered sequence of item-level modifications in a DynamoDB table. Global tables provide a fully managed solution for deploying a multi-Region, multi-active database. DynamoDB supports transactions with ACID properties across multiple items and tables."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/dynamodb-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "673efc6d-ebc8-41e4-899f-10a603c07f23",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            },
+            {
+              "content": {
+                "text": "AWS Lambda Overview\r \r AWS Lambda is a serverless compute service that runs your code in response to events and automatically manages the underlying compute resources. Lambda functions can be triggered by various AWS services including API Gateway, S3, DynamoDB Streams, SNS, SQS, and EventBridge. Lambda supports multiple programming languages including Python, Node.js, Java, Go, .NET, and Ruby. Each Lambda function runs in its own isolated execution environment. Lambda automatically scales by running code in response to each trigger, processing each trigger individually. You pay only for the compute time you consume, with no charge when your code is not running. The maximum execution timeout for a Lambda function is 15 minutes. Lambda functions can have up to 10 GB of memory allocated. Lambda supports container images up to 10 GB in size as deployment packages."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/lambda-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "1d864241-580d-46ee-9067-a8797b616930",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            },
+            {
+              "content": {
+                "text": "Amazon S3 Overview\r \r Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. S3 stores data as objects within buckets. An object consists of a file and optionally any metadata that describes that file. S3 offers multiple storage classes designed for different use cases: S3 Standard for frequently accessed data, S3 Intelligent-Tiering for data with unknown or changing access patterns, S3 Standard-IA and S3 One Zone-IA for infrequently accessed data, S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, and S3 Glacier Deep Archive for long-term archive. S3 provides 99.999999999% (11 nines) of data durability. S3 supports versioning to preserve, retrieve, and restore every version of every object stored in a bucket. S3 bucket names must be globally unique across all AWS accounts."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/s3-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "828c211e-ab2b-412f-9a59-065624c62e85",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "metricName": "Builtin.ContextRelevance",
+          "evaluatorDetails": [
+            {
+              "modelIdentifier": "arn:aws:bedrock:us-east-1:339712939282:inference-profile/us.anthropic.claude-sonnet-4-6",
+              "explanation": "{\"passage_0\": \"The question asks about the two capacity modes available in DynamoDB. The passage explicitly states: 'DynamoDB offers two capacity modes: on-demand and provisioned.' This directly and completely answers the question.\", \"passage_1\": \"The question asks about the two capacity modes available in DynamoDB. The passage is entirely about AWS Lambda - its features, triggers, supported languages, scaling, pricing, and limits. There is no mention of DynamoDB capacity modes (which would be 'Provisioned' and 'On-Demand') anywhere in the passage. The passage is clearly irrelevant to the question.\", \"passage_2\": \"The question asks about the two capacity modes available in DynamoDB. The passage is entirely about Amazon S3, describing its features, storage classes, durability, and versioning. There is no mention of DynamoDB or its capacity modes anywhere in the passage. The passage is clearly irrelevant to the question.\"}"
+            }
+          ],
+          "result": 0.333
+        },
+        {
+          "metricName": "Builtin.ContextCoverage",
+          "evaluatorDetails": [
+            {
+              "modelIdentifier": "arn:aws:bedrock:us-east-1:339712939282:inference-profile/us.anthropic.claude-sonnet-4-6",
+              "explanation": "The ground-truth answer states that 'DynamoDB offers two capacity modes: on-demand and provisioned.' Looking at the passages, the Amazon DynamoDB Overview passage contains the exact sentence: 'DynamoDB offers two capacity modes: on-demand and provisioned.' This fully supports the ground-truth answer, covering all the information needed."
+            }
+          ],
+          "result": 1.0
+        }
+      ]
+    }
+  ]
+}
+{
+  "conversationTurns": [
+    {
+      "inputRecord": {
+        "prompt": {
+          "content": [
+            {
+              "text": "What is DynamoDB Streams?"
+            }
+          ]
+        },
+        "referenceResponses": [
+          {
+            "content": [
+              {
+                "text": "DynamoDB Streams captures a time-ordered sequence of item-level modifications in a DynamoDB table."
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "knowledgeBaseIdentifier": "TBL5DCTTHM",
+        "retrievedResults": {
+          "retrievalResults": [
+            {
+              "content": {
+                "text": "Amazon DynamoDB Overview\r \r Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. DynamoDB supports both key-value and document data models. Tables in DynamoDB are schemaless, meaning each item can have a different set of attributes. DynamoDB uses primary keys to uniquely identify each item in a table. A primary key can be a simple partition key or a composite key consisting of a partition key and a sort key. DynamoDB supports two read consistency models: eventually consistent reads and strongly consistent reads. DynamoDB offers two capacity modes: on-demand and provisioned. DynamoDB Streams captures a time-ordered sequence of item-level modifications in a DynamoDB table. Global tables provide a fully managed solution for deploying a multi-Region, multi-active database. DynamoDB supports transactions with ACID properties across multiple items and tables."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/dynamodb-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "673efc6d-ebc8-41e4-899f-10a603c07f23",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            },
+            {
+              "content": {
+                "text": "Amazon S3 Overview\r \r Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. S3 stores data as objects within buckets. An object consists of a file and optionally any metadata that describes that file. S3 offers multiple storage classes designed for different use cases: S3 Standard for frequently accessed data, S3 Intelligent-Tiering for data with unknown or changing access patterns, S3 Standard-IA and S3 One Zone-IA for infrequently accessed data, S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, and S3 Glacier Deep Archive for long-term archive. S3 provides 99.999999999% (11 nines) of data durability. S3 supports versioning to preserve, retrieve, and restore every version of every object stored in a bucket. S3 bucket names must be globally unique across all AWS accounts."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/s3-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "828c211e-ab2b-412f-9a59-065624c62e85",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            },
+            {
+              "content": {
+                "text": "AWS Lambda Overview\r \r AWS Lambda is a serverless compute service that runs your code in response to events and automatically manages the underlying compute resources. Lambda functions can be triggered by various AWS services including API Gateway, S3, DynamoDB Streams, SNS, SQS, and EventBridge. Lambda supports multiple programming languages including Python, Node.js, Java, Go, .NET, and Ruby. Each Lambda function runs in its own isolated execution environment. Lambda automatically scales by running code in response to each trigger, processing each trigger individually. You pay only for the compute time you consume, with no charge when your code is not running. The maximum execution timeout for a Lambda function is 15 minutes. Lambda functions can have up to 10 GB of memory allocated. Lambda supports container images up to 10 GB in size as deployment packages."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/lambda-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "1d864241-580d-46ee-9067-a8797b616930",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "metricName": "Builtin.ContextRelevance",
+          "evaluatorDetails": [
+            {
+              "modelIdentifier": "arn:aws:bedrock:us-east-1:339712939282:inference-profile/us.anthropic.claude-sonnet-4-6",
+              "explanation": "{\"passage_0\": \"The question asks about DynamoDB Streams. The passage contains a sentence that directly addresses this: 'DynamoDB Streams captures a time-ordered sequence of item-level modifications in a DynamoDB table.' This provides a basic definition of DynamoDB Streams, which is relevant to answering the question. While the passage doesn't go into extensive detail about DynamoDB Streams, it does contain information necessary to provide at least a basic answer to the question.\", \"passage_1\": \"The question asks about DynamoDB Streams, which is a feature of Amazon DynamoDB. The passage, however, is entirely about Amazon S3 (Simple Storage Service), covering topics like object storage, storage classes, durability, and versioning. There is no mention of DynamoDB or DynamoDB Streams anywhere in the passage. The passage is clearly irrelevant to the question.\", \"passage_2\": \"The question asks specifically about what DynamoDB Streams is. The passage is about AWS Lambda and only briefly mentions DynamoDB Streams as one of the triggers that can invoke Lambda functions. It does not explain what DynamoDB Streams is, how it works, or provide any meaningful information about DynamoDB Streams itself. The passage is primarily about Lambda's features, scaling, pricing, and runtime support.\"}"
+            }
+          ],
+          "result": 0.333
+        },
+        {
+          "metricName": "Builtin.ContextCoverage",
+          "evaluatorDetails": [
+            {
+              "modelIdentifier": "arn:aws:bedrock:us-east-1:339712939282:inference-profile/us.anthropic.claude-sonnet-4-6",
+              "explanation": "The ground-truth answer states: 'DynamoDB Streams captures a time-ordered sequence of item-level modifications in a DynamoDB table.' The first passage (Amazon DynamoDB Overview) contains the exact same sentence: 'DynamoDB Streams captures a time-ordered sequence of item-level modifications in a DynamoDB table.' This means the passage fully supports the ground-truth answer."
+            }
+          ],
+          "result": 1.0
+        }
+      ]
+    }
+  ]
+}
+{
+  "conversationTurns": [
+    {
+      "inputRecord": {
+        "prompt": {
+          "content": [
+            {
+              "text": "What storage classes does Amazon S3 offer?"
+            }
+          ]
+        },
+        "referenceResponses": [
+          {
+            "content": [
+              {
+                "text": "S3 offers S3 Standard, S3 Intelligent-Tiering, S3 Standard-IA, S3 One Zone-IA, S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, and S3 Glacier Deep Archive."
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "knowledgeBaseIdentifier": "TBL5DCTTHM",
+        "retrievedResults": {
+          "retrievalResults": [
+            {
+              "content": {
+                "text": "Amazon S3 Overview\r \r Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. S3 stores data as objects within buckets. An object consists of a file and optionally any metadata that describes that file. S3 offers multiple storage classes designed for different use cases: S3 Standard for frequently accessed data, S3 Intelligent-Tiering for data with unknown or changing access patterns, S3 Standard-IA and S3 One Zone-IA for infrequently accessed data, S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, and S3 Glacier Deep Archive for long-term archive. S3 provides 99.999999999% (11 nines) of data durability. S3 supports versioning to preserve, retrieve, and restore every version of every object stored in a bucket. S3 bucket names must be globally unique across all AWS accounts."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/s3-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "828c211e-ab2b-412f-9a59-065624c62e85",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            },
+            {
+              "content": {
+                "text": "Amazon DynamoDB Overview\r \r Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. DynamoDB supports both key-value and document data models. Tables in DynamoDB are schemaless, meaning each item can have a different set of attributes. DynamoDB uses primary keys to uniquely identify each item in a table. A primary key can be a simple partition key or a composite key consisting of a partition key and a sort key. DynamoDB supports two read consistency models: eventually consistent reads and strongly consistent reads. DynamoDB offers two capacity modes: on-demand and provisioned. DynamoDB Streams captures a time-ordered sequence of item-level modifications in a DynamoDB table. Global tables provide a fully managed solution for deploying a multi-Region, multi-active database. DynamoDB supports transactions with ACID properties across multiple items and tables."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/dynamodb-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "673efc6d-ebc8-41e4-899f-10a603c07f23",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            },
+            {
+              "content": {
+                "text": "AWS Lambda Overview\r \r AWS Lambda is a serverless compute service that runs your code in response to events and automatically manages the underlying compute resources. Lambda functions can be triggered by various AWS services including API Gateway, S3, DynamoDB Streams, SNS, SQS, and EventBridge. Lambda supports multiple programming languages including Python, Node.js, Java, Go, .NET, and Ruby. Each Lambda function runs in its own isolated execution environment. Lambda automatically scales by running code in response to each trigger, processing each trigger individually. You pay only for the compute time you consume, with no charge when your code is not running. The maximum execution timeout for a Lambda function is 15 minutes. Lambda functions can have up to 10 GB of memory allocated. Lambda supports container images up to 10 GB in size as deployment packages."
+              },
+              "location": {
+                "s3Location": {
+                  "uri": "s3://bedrock-batch-input-339712939282/rag-evaluation/lambda-overview.txt"
+                },
+                "type": "S3"
+              },
+              "metadata": {
+                "x-amz-bedrock-kb-source-file-modality": "TEXT",
+                "x-amz-bedrock-kb-chunk-id": "1d864241-580d-46ee-9067-a8797b616930",
+                "x-amz-bedrock-kb-data-source-id": "SEZN9GCT1S"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "metricName": "Builtin.ContextRelevance",
+          "evaluatorDetails": [
+            {
+              "modelIdentifier": "arn:aws:bedrock:us-east-1:339712939282:inference-profile/us.anthropic.claude-sonnet-4-6",
+              "explanation": "{\"passage_0\": \"The question asks about what storage classes Amazon S3 offers. The passage explicitly lists multiple S3 storage classes: S3 Standard, S3 Intelligent-Tiering, S3 Standard-IA, S3 One Zone-IA, S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, and S3 Glacier Deep Archive. This directly and completely answers the question.\", \"passage_1\": \"The question asks about Amazon S3 storage classes. The passage is entirely about Amazon DynamoDB, a NoSQL database service. There is no mention of Amazon S3 or its storage classes anywhere in the passage. The passage is clearly irrelevant to the question.\", \"passage_2\": \"The question asks about Amazon S3 storage classes. The passage is entirely about AWS Lambda, a serverless compute service. There is no mention of Amazon S3 storage classes in the passage. The passage is clearly irrelevant to the question.\"}"
+            }
+          ],
+          "result": 0.333
+        },
+        {
+          "metricName": "Builtin.ContextCoverage",
+          "evaluatorDetails": [
+            {
+              "modelIdentifier": "arn:aws:bedrock:us-east-1:339712939282:inference-profile/us.anthropic.claude-sonnet-4-6",
+              "explanation": "The ground-truth answer lists 7 specific S3 storage classes: S3 Standard, S3 Intelligent-Tiering, S3 Standard-IA, S3 One Zone-IA, S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, and S3 Glacier Deep Archive. The first passage (Amazon S3 Overview) explicitly mentions all 7 of these storage classes: 'S3 Standard for frequently accessed data, S3 Intelligent-Tiering for data with unknown or changing access patterns, S3 Standard-IA and S3 One Zone-IA for infrequently accessed data, S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, and S3 Glacier Deep Archive for long-term archive.' All information in the ground-truth answer is fully supported by the passages."
+            }
+          ],
+          "result": 1.0
+        }
+      ]
+    }
+  ]
+}
