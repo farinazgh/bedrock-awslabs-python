@@ -1,0 +1,30 @@
+{
+  "prompt": "Summarize the following incident in exactly 2 sentences and identify the quota that caused throttling:\n\nA Bedrock workload sends 620 requests per minute against a quota of 1,000 requests per minute. Its combined token usage reaches 920,000 tokens per minute against a quota of 800,000. During the peak period the application receives HTTP 429 errors. CPU utilization remains near 35 percent and network metrics are normal.",
+  "category": "accuracy_reasoning",
+  "referenceResponse": "The workload stays below its request-per-minute quota but exceeds the token-per-minute quota by 120,000, so token throughput is causing the 429 throttling. Normal CPU and network metrics do not indicate an infrastructure bottleneck."
+}
+{
+  "prompt": "Summarize only what is relevant to whether this migration improved application performance in 2 sentences:\n\nAcme migrated 60 percent of its workloads to AWS and reduced monthly infrastructure cost by 18 percent. The migration used twelve engineers across three availability zones. Monitoring was disabled during the cutover, and no before-and-after latency or throughput measurements were retained. A later marketing presentation claimed the application became faster, but the claim was not measured.",
+  "category": "relevance",
+  "referenceResponse": "The available evidence cannot show that application performance improved because no before-and-after latency or throughput measurements were retained. The later claim that the application became faster is therefore unverified."
+}
+{
+  "prompt": "Summarize the confirmed findings only in 2-3 sentences:\n\nA security review found 42 S3 buckets marked public. Inspection showed that 40 intentionally served public static assets, while 2 contained application logs and should not have been public. Investigators have not determined whether anyone accessed those logs externally, and no evidence of data exfiltration has been found. One engineer speculated that credentials may also have leaked, but no credential leak has been confirmed.",
+  "category": "faithfulness",
+  "referenceResponse": "Two S3 buckets containing application logs were unintentionally public, while the other 40 public buckets were expected. External access to the logs remains unknown, no data exfiltration has been found, and no credential leak has been confirmed."
+}
+{
+  "prompt": "Summarize whether the following production change should be considered successful in 2-3 sentences:\n\nA new inference cache reduced median response latency from 900 milliseconds to 420 milliseconds and lowered model spend by 22 percent. However, stale answers increased from 0.3 percent to 4.8 percent and customer support tickets doubled. The team rolled back the cache after two hours because answer quality had degraded.",
+  "category": "completeness",
+  "referenceResponse": "The cache substantially improved latency and reduced model cost, but it also caused a major increase in stale answers and doubled support tickets. Because the quality regression forced a rollback, the production change should not be considered successful overall."
+}
+{
+  "prompt": "Summarize the following in exactly 2 sentences and no more than 40 words. Mention one benefit and one risk, and do not mention the vendor name:\n\nA company replaced its self-hosted vector database with a managed service. Indexing time fell from four hours to 45 minutes and operational work dropped from ten hours per week to two. Monthly cost increased from $2,000 to $7,000, and the export format is proprietary.",
+  "category": "instruction_following",
+  "referenceResponse": "The managed service cut indexing time and greatly reduced operational effort. However, monthly cost rose sharply, creating a significant financial trade-off."
+}
+{
+  "prompt": "Summarize the following for a nontechnical executive in 2 sentences. Do not use acronyms or specialist terms:\n\nA retrieval-augmented assistant produced grounded answers 93 percent of the time when search returned relevant documents, but sometimes relied on pretrained knowledge when search missed. Adding a reranking step improved the quality of retrieved documents, while the slowest five percent of responses increased from 1.8 seconds to 2.6 seconds.",
+  "category": "readability",
+  "referenceResponse": "The assistant was usually reliable when it found the right source material, and an extra ranking step improved the quality of what it found. That improvement came with a trade-off: the slowest responses took noticeably longer."
+}
